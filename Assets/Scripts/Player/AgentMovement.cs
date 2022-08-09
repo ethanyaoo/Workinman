@@ -225,12 +225,22 @@ public class AgentMovement : MonoBehaviour
     {
         bool playerHasVerticalSpeed = Mathf.Abs(movementVelocity.y) > Mathf.Epsilon;
         animator.SetBool("isClimbing", playerHasVerticalSpeed);
+
+        animator.SetBool("isJumping", false);
     }
 
     public void setJumpingAnimation(Vector2 movementVelocity)
     {
         bool playerHasVerticalSpeed = Mathf.Abs(movementVelocity.y) > Mathf.Epsilon;
-        animator.SetBool("isJumping", playerHasVerticalSpeed);
+
+        if (capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            animator.SetBool("isJumping", false);
+        }
+        else
+        {
+            animator.SetBool("isJumping", playerHasVerticalSpeed);
+        }
     }
 
     public void setThrowingAnimation(bool val)

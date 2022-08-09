@@ -11,12 +11,12 @@ public class GameSession : MonoBehaviour
     [SerializeField] private GameObject cameraController;
     [SerializeField] private GameObject player;
     [SerializeField] private int playerLives = 3;
-    [SerializeField] private int gameScore = 0;
+    
+    private int gameScore = 0;
 
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI scoreText;
 
-    [SerializeField] private float pauseMenuDelay = 1f;
     [SerializeField] private float deathTimer = 2.5f;
 
     [HideInInspector] public GameState gameState;

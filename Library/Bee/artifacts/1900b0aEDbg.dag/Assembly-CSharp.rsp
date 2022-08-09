@@ -399,7 +399,6 @@
 "Assets/Scripts/UI/ResumeButton.cs"
 "Assets/Scripts/UI/Score.cs"
 "Assets/Scripts/UI/ScorePrefab.cs"
-"Assets/Scripts/Unity.gitignore.cs"
 -langversion:9.0
 
 /deterministic

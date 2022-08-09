@@ -54,7 +54,6 @@ public class Maze : MonoBehaviour
     public int height = 5;
     public float scale = 10f;
 
-    private int mainPathCounter = 0;
     private float timeBetweenRoom;
     public float startTimeBetweenRoom = 0.25f;
 
