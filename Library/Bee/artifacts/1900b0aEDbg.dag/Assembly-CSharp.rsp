@@ -386,7 +386,6 @@
 "Assets/Scripts/Misc_/CoinPickup.cs"
 "Assets/Scripts/Misc_/LevelExit.cs"
 "Assets/Scripts/Misc_/Settings.cs"
-"Assets/Scripts/Player/AgentAnimations.cs"
 "Assets/Scripts/Player/AgentBomb.cs"
 "Assets/Scripts/Player/AgentMovement.cs"
 "Assets/Scripts/ScenePersist.cs"
