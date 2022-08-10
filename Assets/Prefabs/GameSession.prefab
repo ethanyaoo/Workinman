@@ -170,8 +170,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Lives
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c13c526c5696c146bccf32282d78f45, type: 2}
+  m_sharedMaterial: {fileID: -3404944286120851037, guid: 0c13c526c5696c146bccf32282d78f45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -305,8 +305,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Score
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c13c526c5696c146bccf32282d78f45, type: 2}
+  m_sharedMaterial: {fileID: -3404944286120851037, guid: 0c13c526c5696c146bccf32282d78f45, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -383,6 +383,7 @@ GameObject:
   - component: {fileID: 1850967039633563570}
   - component: {fileID: 1986280419252930092}
   - component: {fileID: 1750067740}
+  - component: {fileID: 7056208175103080832}
   m_Layer: 0
   m_Name: GameSession
   m_TagString: Untagged
@@ -418,12 +419,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7058dc0e17120b4fbdf9264a12c4a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraController: {fileID: 0}
   player: {fileID: 6702621328559845200, guid: 0c3406d870111f3478582c5cee3a699c, type: 3}
+  goal: {fileID: 1508545287311291576, guid: c3f6bd5b359b0d74aa93b203f26838b2, type: 3}
   playerLives: 3
-  gameScore: 0
-  livesText: {fileID: 728521781}
-  scoreText: {fileID: 990428624}
-  pauseMenuDelay: 0.1
+  livesText: {fileID: 0}
+  scoreText: {fileID: 0}
   deathTimer: 2.5
   gameState: 0
   previousGameState: 0
@@ -460,3 +461,18 @@ MonoBehaviour:
   m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7056208175103080832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2576081427504762484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3582b3595f73cc4ab4bb7496e8633da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerTimeTotal: 10
+  timeLeft: 0
+  textMeshPro: {fileID: 0}

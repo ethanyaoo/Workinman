@@ -10,6 +10,9 @@ public class GameSession : MonoBehaviour
 {
     [SerializeField] private GameObject cameraController;
     [SerializeField] private GameObject player;
+    private GameObject playerHold;
+    [SerializeField] private GameObject goal;
+    private GameObject goalHold;
     [SerializeField] private int playerLives = 3;
     
     private int gameScore = 0;
@@ -27,6 +30,8 @@ public class GameSession : MonoBehaviour
     [SerializeField] private CanvasGroup canvasGroup;
 
     private int currLevelIndex = 0;
+
+    private Vector2 originPos;
 
     void Awake()
     {
@@ -68,12 +73,19 @@ public class GameSession : MonoBehaviour
 
     public void InstantiatePlayer(Vector2 vecPos)
     {
+        originPos = new Vector2(vecPos.x, vecPos.y);
         scoreText.text = gameScore.ToString();
 
-        GameObject playerHold = Instantiate(player, vecPos, Quaternion.identity);
+        playerHold = Instantiate(player, originPos, Quaternion.identity);
+        //playerHold.transform.SetParent(transform);
         cameraController.GetComponent<CinemachineTarget>().player = playerHold;
         cameraController.GetComponent<CinemachineTarget>().SetCinemachineTargetGroup();
         gameState = GameState.playingLevel;
+    }
+
+    public void InstantiateGoal(Vector2 vecPos)
+    {
+        goalHold = Instantiate(goal, vecPos, Quaternion.identity);
     }
 
     public void ProcessPlayerDeath()
@@ -97,13 +109,15 @@ public class GameSession : MonoBehaviour
 
     IEnumerator DecreaseLifeCounter()
     {
+        playerLives--;
+        livesText.text = playerLives.ToString();
+
         yield return new WaitForSecondsRealtime(deathTimer);
 
-        playerLives--;
-
         int currSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currSceneIndex);
-        livesText.text = playerLives.ToString();
+        //SceneManager.LoadScene(currSceneIndex);
+        Destroy(playerHold);
+        InstantiatePlayer(originPos);
     }
 
     void PlayDungeonLevel(int val)
@@ -226,7 +240,7 @@ public class GameSession : MonoBehaviour
     /// Win Game
     /// </summary>
     /// 
-    private void GameWon()
+    public void GameWon()
     {
         previousGameState = GameState.gameWon;
 
@@ -254,6 +268,15 @@ public class GameSession : MonoBehaviour
             rankText = "YOUR SCORE ISN'T RANKED IN THE TOP " + Settings.numOfHighScoresTotal.ToString("#0");
         }
 
+
+        gameState = GameState.restartGame;
+    }
+
+    public void GameLost()
+    {
+        previousGameState = GameState.gameLost;
+
+        player.GetComponent<AgentMovement>().DisablePlayer();
 
         gameState = GameState.restartGame;
     }

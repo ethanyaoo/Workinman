@@ -38,6 +38,8 @@ public class AgentMovement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
 
         gravityScaleAtStart = rigidbody2d.gravityScale;
+
+        Debug.Log("Created Awake player");
     }
 
     // Update is called once per frame

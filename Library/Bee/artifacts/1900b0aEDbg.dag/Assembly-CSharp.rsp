@@ -371,6 +371,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/BombExplosion.cs"
 "Assets/Scripts/CinemachineTarget.cs"
 "Assets/Scripts/DataSO/MovementDataSO.cs"
 "Assets/Scripts/Enemy/EnemyMovement.cs"
@@ -399,6 +400,7 @@
 "Assets/Scripts/UI/ResumeButton.cs"
 "Assets/Scripts/UI/Score.cs"
 "Assets/Scripts/UI/ScorePrefab.cs"
+"Assets/Scripts/UI/TimerUI.cs"
 -langversion:9.0
 
 /deterministic

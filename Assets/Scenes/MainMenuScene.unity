@@ -1719,7 +1719,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2064743028}
         m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_MethodName: PlayTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1814,10 +1814,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.21510418
     y: 0
-    width: 1
-    height: 1
+    width: 0.3388889
+    height: 0.33888888
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

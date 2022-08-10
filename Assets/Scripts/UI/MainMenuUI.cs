@@ -36,6 +36,8 @@ public class MainMenuUI : MonoBehaviour
         playTutorialButton.SetActive(false);
         playGameButton.SetActive(false);
         highScoreButton.SetActive(false);
+        ruleButton.SetActive(false);
+
         isHighScoresSceneLoaded = true;
 
         returnToMainMenuButton.SetActive(true);

@@ -346,7 +346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -87.5}
+  m_AnchoredPosition: {x: 120, y: -115}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1565685269
@@ -371,15 +371,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: '-USE ''AD'' KEYS TO MOVE LEFT AND RIGHT
 
-
     -USE ''SPACEBAR'' TO JUMP
-
 
     -USE
     MOUSE TO LEFT CLICK TO THROW BOMB
 
+    -PRESS ''ESC'' TO OPEN UP PAUSE MENU
 
-    -PRESS ''ESC'' TO OPEN UP PAUSE MENU'
+    -FIND
+    THE LAST APPLE BEFORE THE TIMER RUNS OUT TO WIN'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c13c526c5696c146bccf32282d78f45, type: 2}
   m_sharedMaterial: {fileID: -3404944286120851037, guid: 0c13c526c5696c146bccf32282d78f45, type: 2}
@@ -406,8 +406,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

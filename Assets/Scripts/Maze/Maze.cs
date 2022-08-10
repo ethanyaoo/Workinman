@@ -278,6 +278,21 @@ public class Maze : MonoBehaviour
         stopGeneration = true;
         Vector2 startingPos = new Vector2(15f, 45f);
         gameSession.GetComponent<GameSession>().InstantiatePlayer(startingPos);
+
+        int randX = Random.Range(2, width - 1);
+        int randY = Random.Range(1, height - 2);
+
+        Vector2 goalPos = new Vector2(5 + (randX * scale), 5 + (randY * scale));
+        
+        if (goalPos == startingPos)
+        {
+            randX = Random.Range(2, width - 1);
+            randY = Random.Range(2, height - 1);
+
+            goalPos = new Vector2(5 + (randX * scale), 5 + (randY * scale));
+        }
+
+        gameSession.GetComponent<GameSession>().InstantiateGoal(goalPos);
     }
 
     bool search2D(int col, int row, int[] pattern)
